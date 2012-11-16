@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<!-- 
+Freebox Zapper - Remote control for the Freebox
+Copyright (C) 2012 Vincent Hiribarren
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Télécommande Freebox</title>
+
+<link rel="stylesheet" href="lib/jquery.mobile-1.2.0/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="app.css" />
+
+<script src="lib/jquery-1.8.2/jquery-1.8.2.min.js"></script>
+<script src="lib/jquery.mobile-1.2.0/jquery.mobile-1.2.0.min.js"></script>
+<script src="lib/modernizr-2.6.2.custom/modernizr.custom.55875.js"></script>
+<script src="app.js"></script>
+
+
+<div data-role="page" id="pageRemoteControl">
+
+	<div data-role="header" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-icon="grid" href="#pageRemoteControl" class="ui-btn-active ui-state-persist">Commandes</a></li>
+				<li><a data-icon="info" href="#pageAbout">Info</a></li>
+				<li><a data-icon="gear" href="#pageConfigure">Configuration</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div data-role="content">
+	
+		<table id="groupTop" class="multiPad">
+			<tr>
+				<td id="groupChannels" class="multiPadLeft">
+					<div id="btn-prgm-inc" class="btn" data-btn="prgm_inc">+</div>
+					<div>Prog</div>
+					<div id="btn-prgm-dec" class="btn" data-btn="prgm_dec">+</div>
+				</td>
+				<td id="groupNumbers" class="multiPadMiddle">
+					<table class="keypad">
+						<tr>
+							<td><div id="btn-1" class="btn" data-btn="1">1</div></td>
+							<td><div id="btn-2" class="btn" data-btn="2">2</div></td>
+							<td><div id="btn-3" class="btn" data-btn="3">3</div></td>
+						</tr>
+						<tr>
+							<td><div id="btn-4" class="btn" data-btn="4">4</div></td>
+							<td><div id="btn-5" class="btn" data-btn="5">5</div></td>
+							<td><div id="btn-6" class="btn" data-btn="6">6</div></td>
+						</tr>
+						<tr>
+							<td><div id="btn-7" class="btn" data-btn="7">7</div></td>
+							<td><div id="btn-8" class="btn" data-btn="8">8</div></td>
+							<td><div id="btn-9" class="btn" data-btn="9">9</div></td>
+						</tr>
+						<tr>
+							<td colspan="3"><div id="btn-0" class="btn" data-btn="0">0</div></td>
+						</tr>
+					</table>
+				</td>
+				<td id="groupVolume" class="multiPadRight">
+					<div id="btn-vol-inc" class="btn" data-btn="vol_inc">+</div>
+					<div>Volume</div>
+					<div id="btn-vol-dec" class="btn" data-btn="vol_dec">-</div>
+				</td>
+			</tr>
+		</table>
+		<table id="groupMiddle" class="multiPad">
+			<tr>
+				<td id="groupControl" class="multiPadLeft">
+					<div id="btn-power" class="btn" data-btn="power">☾ ON/OFF</div>
+					<div id="btn-av" class="btn" data-btn="av">AV</div>
+				</td>
+				<td id="groupPad" class="multiPadMiddle">
+					<table class="keypad">
+						<tr>
+							<td><div id="btn-red" class="btn" data-btn="red">←</div></td>
+							<td><div id="btn-up" class="btn" data-btn="up">▲</div></td>
+							<td><div id="btn-blue" class="btn" data-btn="blue">Chercher</div></td>
+						</tr>
+						<tr>
+							<td><div id="btn-left" class="btn" data-btn="left">◄</div></td>
+							<td><div id="btn-ok" class="btn" data-btn="ok">OK</div></td>
+							<td><div id="btn-right" class="btn" data-btn="right">►</div></td>
+						</tr>
+						<tr>
+							<td><div id="btn-green" class="btn" data-btn="green">Menu</div></td>
+							<td><div id="btn-down" class="btn" data-btn="down">▼</div></td>
+							<td><div id="btn-yellow" class="btn" data-btn="yellow">Info</div></td>
+						</tr>
+					</table>				
+				</td>
+				<td id="groupMisc" class="multiPadRight">
+					<div id="btn-mute" class="btn" data-btn="mute">Son on/off</div>
+					<div id="btn-rec" class="btn" data-btn="rec">●</div>
+				</td>
+			</tr>
+		</table>
+		<div id="btn-free" class="btn" data-btn="home">Free</div>
+		<table id="groupPlayer">
+			<tr>
+				<td><div id="btn-bwd" class="btn" data-btn="bwd">◄◄</div></td>
+				<td><div id="btn-play" class="btn" data-btn="play">►║</div></td>
+				<td><div id="btn-fwd" class="btn" data-btn="fwd">►►</div></td>
+			</tr>
+		</table>		
+	</div><!-- /content -->
+
+	<div data-role='popup' id="noRemoteControlCode"><p>Aucune télécommande n'a été définie.</p></div>
+	<div data-role='popup' id="badCommandCode"><p>Cette commande n'est pas reconnue par la Freebox.</p></div>
+	<div data-role='popup' id="badRemoteControlCode"><p>Ce code de télécommande n'est pas reconnue par la Freebox.</p></div>
+	
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="pageAbout">
+
+	<div data-role="header" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-icon="grid" href="#pageRemoteControl">Commandes</a></li>
+				<li><a data-icon="info" href="#pageAbout" class="ui-btn-active ui-state-persist">Info</a></li>
+				<li><a data-icon="gear" href="#pageConfigure">Configuration</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<h2>Auteur</h2>
+		<p>©2012 Vincent Hiribarren
+		<p><a href="http://www.alea.net/">http://www.alea.net/</a>
+		<hr>
+		<h2>Fonctionnalités</h2>
+		<ul>
+			<li>Freebox v6 supporté
+			<li>Dédié au contrôle TV
+			<li>Contrôle via WiFi, ne fonctionne pas en 3G/4G
+			<li>Complémentaire à votre télécommande, ne se substitue pas à elle
+			<li>Mouvements et appuis longs non pris en compte
+		</ul>
+		<hr>
+		<h2>License</h2>
+		<p>Logiciel sous GNU GPL v3.
+		<p>Code source disponible sur GitHub -
+		<a href="https://github.com/vhyrbi/freebox-remote-control">https://github.com/vhyrbi/freebox-remote-control</a>
+		<hr>
+		<h2>Concernant le logiciel</h2>
+		<p>D'autres systèmes de télécommande pour Freebox existent. J'étais cependant mal à l'aise à l'idée d'utiliser
+		un logiciel créé par autrui pour commander ma Freebox. En effet, lorsqu'on donne comme autorisation l'accès
+		réseau complet à un logiciel, ce dernier peut très bien envoyer des statistiques sur mon utilisation de la Freebox
+		à une autre personne.
+		<p>J'ai donc préféré faire mon propre logiciel. Je suis ainsi sûr de ce qu'il contient. Dans la mesure où il a été vite
+		fait, celui-ci est uniquement dédié à la Freebox v6 pour des commandes simples (TV). 
+		<p>Eventuellement, le jour où l'ancien système de Freebox par HTTP ne sera plus supporté, l'outil évoluera peut-être
+		et corrigera alors ces limitations.
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="pageConfigure">
+
+	<div data-role="header" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-icon="grid" href="#pageRemoteControl">Commandes</a></li>
+				<li><a data-icon="info" href="#pageAbout">Info</a></li>
+				<li><a data-icon="gear" href="#pageConfigure" class="ui-btn-active ui-state-persist">Configuration</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<h2>Gestion de la télécommande</h2>
+		<form>
+			<div data-role="fieldcontain">
+				<label for="number">Code Télécommande:</label>
+				<input type="text" id="inputRemoteControlCode">
+			</div>
+		</form>
+		<p>Pour trouver le numéro de votre télécommande, allez dans le menu "réglages",
+		puis "télécommande".
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+
+<div data-role="dialog" id="notEnoughCapabilities">
+	<div data-role="header" data-theme="d">
+		<h1>Restrictions</h1>
+	</div>
+	<div data-role="content" data-theme="c">
+		<p>Avec la version actuelle de votre téléphone et de ce logiciel, vous ne pourrez
+		pas sauver le numéro de votre télécommande Freebox.</p>
+		<a href="#" data-role="button" data-rel="back" data-theme="b">OK</a>         
+	</div>
+</div>
+
+
+<div data-role="dialog" id="firstLaunchDialog">
+	<div data-role="header" data-theme="d">
+		<h1>Bienvenue</h1>
+	</div>
+	<div data-role="content" data-theme="c">
+		<p>Avant d'utiliser ce logiciel, vous devez d'abord configurer
+		le code de votre télécommande.</p>
+		<a href="#" data-role="button" data-rel="back" data-theme="b">OK</a>         
+	</div>
+</div>
+
