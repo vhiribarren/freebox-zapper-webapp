@@ -67,6 +67,10 @@ table.keypad td {
 	height: 100%;
 }
 
+#groupPlayer td {
+	width: 33%;
+}
+
 #groupPlayer  div.btn {
 	padding: 5px 0;
 	height: 100%;
