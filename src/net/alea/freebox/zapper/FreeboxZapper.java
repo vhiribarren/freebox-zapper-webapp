@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 package net.alea.freebox.zapper;
 
-import net.alea.freebox.remotecontrol.R;
+import net.alea.freebox.zapper.R;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
