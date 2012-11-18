@@ -59,15 +59,14 @@ function checkCapabilities() {
 		storage.setItem = function(item, value) {data[item] = value;};
 		return storage;
 	})();
-	$.mobile.changePage('#notEnoughCapabilities');
+	$.mobile.changePage('#notEnoughCapabilities', {transition: "none"});
 }
 
 function checkFirstLaunch() {
 	var isFirstLaunch = localStorage.getItem("firstLaunch");
 	if ( isFirstLaunch === null) {
 		localStorage.setItem("firstLaunch", false);
-		$.mobile.changePage('#pageConfigure');
-		$.mobile.changePage('#firstLaunchDialog');	
+		$.mobile.changePage('#firstLaunchDialog', {transition: "none"});	
 	}
 }
 
@@ -100,7 +99,6 @@ $(function() {
 		}
 		localStorage.setItem("remoteControlCode", code);
 	});
-	$.mobile.changePage('#pageRemoteControl');
 	checkCapabilities();
 	checkFirstLaunch();
 	loadRemoteControlCode();
