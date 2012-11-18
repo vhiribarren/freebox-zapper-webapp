@@ -98,11 +98,63 @@ div.btn:active {
 	background: #555 !important;
 }
 
-#btn-rec {
-	color: red;
-	font-size: 1.5em;
-	padding: 10% 0;
+#groupControl div.btn,
+#groupMisc div.btn {
+	height: 33%;
 }
+
+#btn-power,
+#btn-rec {
+	height: 100%;
+	padding: 0 !important;	
+}
+
+.imgLeft, .imgRight, .imgUp, .imgDown,
+.imgFwd, .imgBwd, .imgPlay, .imgRec,
+.imgPower {
+	width: 100%;
+	height: 100%;
+	background-size: auto 20px;
+	background-repeat: no-repeat;
+	background-position: center; 	
+}
+
+.imgPower {
+	background-image: url(img/power.png);
+}
+
+.imgLeft {
+	background-image: url(img/left.png);	
+}
+
+.imgRight {
+	background-image: url(img/right.png);	
+}
+
+.imgUp {
+	background-image: url(img/up.png);	
+}
+
+.imgDown {
+	background-image: url(img/down.png);	
+}
+
+.imgFwd {
+	background-image: url(img/fwd.png);	
+}
+
+.imgPlay {
+	background-image: url(img/play.png);	
+}
+
+.imgBwd {
+	background-image: url(img/bwd.png);	
+}
+
+.imgRec {
+	background-image: url(img/rec.png);	
+}
+
 
 #btn-red {
 	color: white;
