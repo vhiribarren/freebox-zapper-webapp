@@ -45,12 +45,13 @@ table.keypad {
 }
 
 table.keypad div.btn {
-	padding: 10px 0;
+	padding: 5px 0;
 	height: 100%;
 }
 
 table.keypad td {
-	width: 33%
+	width: 33%;
+	height: 40px;
 }
 
 #groupNumbers div.btn {
@@ -78,6 +79,7 @@ table.keypad td {
 }
 
 div.btn {
+	font-weight: bold;
 	cursor: pointer;
 	text-align: center;
 	border-style: solid;
@@ -104,7 +106,8 @@ div.btn:active {
 }
 
 #btn-power,
-#btn-rec {
+#btn-rec,
+#btn-mute {
 	height: 100%;
 	padding: 0 !important;	
 }
@@ -173,7 +176,7 @@ div.btn:active {
 }
 
 .imgMute {
-	background-size: auto 32px;
+	background-size: auto 25px;
 	background-image: url(img/mute.png);		
 }
 
