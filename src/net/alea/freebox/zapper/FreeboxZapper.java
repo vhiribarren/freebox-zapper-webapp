@@ -40,7 +40,7 @@ public class FreeboxZapper extends Activity {
 		WebSettings webSettings = myWebView.getSettings();
 		webSettings.setJavaScriptEnabled(true);
 		webSettings.setDatabaseEnabled(true);
-		webSettings.setDatabasePath("/data/data/net.alea.freebox.remotecontrol/databases");
+		webSettings.setDatabasePath("/data/data/"+getPackageName()+"/databases");
 		webSettings.setDomStorageEnabled(true);
 		myWebView.setWebChromeClient(new WebChromeClient() {
 			  public boolean onConsoleMessage(ConsoleMessage cm) {
