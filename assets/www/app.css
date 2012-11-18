@@ -111,7 +111,8 @@ div.btn:active {
 
 .imgLeft, .imgRight, .imgUp, .imgDown,
 .imgFwd, .imgBwd, .imgPlay, .imgRec,
-.imgPower {
+.imgBlue, .imgRed, .imgGreen, .imgYellow,
+.imgPower, .imgMute {
 	width: 100%;
 	height: 100%;
 	background-size: auto 20px;
@@ -155,6 +156,26 @@ div.btn:active {
 	background-image: url(img/rec.png);	
 }
 
+.imgBlue {
+	background-image: url(img/search.png);	
+}
+
+.imgRed {
+	background-image: url(img/back.png);		
+}
+
+.imgYellow {
+	background-image: url(img/info.png);		
+}
+
+.imgGreen {
+	background-image: url(img/menu.png);		
+}
+
+.imgMute {
+	background-size: auto 32px;
+	background-image: url(img/mute.png);		
+}
 
 #btn-red {
 	color: white;
