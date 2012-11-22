@@ -59,14 +59,14 @@ function checkCapabilities() {
 		storage.setItem = function(item, value) {data[item] = value;};
 		return storage;
 	})();
-	$.mobile.changePage('#notEnoughCapabilities', {transition: "none"});
+	$.mobile.changePage('#notEnoughCapabilities');
 }
 
 function checkFirstLaunch() {
 	var isFirstLaunch = localStorage.getItem("firstLaunch");
 	if ( isFirstLaunch === null) {
 		localStorage.setItem("firstLaunch", false);
-		$.mobile.changePage('#firstLaunchDialog', {transition: "none"});	
+		$.mobile.changePage('#firstLaunchDialog');	
 	}
 }
 
@@ -80,6 +80,7 @@ function loadRemoteControlCode() {
 
 $(function() {
 	console.info("Starting Webapp");
+	$.mobile.defaultPageTransition = "none";
 	$(".btn").click(function() {
 		if ( remoteControlCode !== null ) {
 			var command = $(this).attr("data-btn");
