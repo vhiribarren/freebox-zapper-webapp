@@ -13,13 +13,48 @@
    height="1051.36"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.1 "
+   inkscape:version="0.91 r13725"
    inkscape:export-filename="C:\Users\Vynce\Desktop\bitmap.png"
    inkscape:export-xdpi="16.674215"
    inkscape:export-ydpi="16.674215"
    sodipodi:docname="symbols.svg">
   <defs
-     id="defs4" />
+     id="defs4">
+    <filter
+       y="-0.25"
+       height="1.5"
+       inkscape:menu-tooltip="Darkens the edge with an inner blur and adds a flexible glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:label="Dark And Glow"
+       style="color-interpolation-filters:sRGB;"
+       id="filter4327">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result6"
+         id="feGaussianBlur4329" />
+      <feComposite
+         result="result8"
+         in="SourceGraphic"
+         operator="atop"
+         in2="result6"
+         id="feComposite4331" />
+      <feComposite
+         result="result9"
+         operator="over"
+         in2="SourceAlpha"
+         in="result8"
+         id="feComposite4333" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+         result="result10"
+         id="feColorMatrix4335" />
+      <feBlend
+         in="result10"
+         mode="normal"
+         in2="result6"
+         id="feBlend4337" />
+    </filter>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -28,17 +63,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="-4.7296188"
-     inkscape:cy="683.0481"
+     inkscape:cx="292.03808"
+     inkscape:cy="377.81539"
      inkscape:document-units="px"
      inkscape:current-layer="g4881"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1166"
-     inkscape:window-height="761"
-     inkscape:window-x="26"
-     inkscape:window-y="80"
+     inkscape:window-width="1078"
+     inkscape:window-height="665"
+     inkscape:window-x="170"
+     inkscape:window-y="333"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -48,9 +83,9 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
         <cc:license
-           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
         <dc:creator>
           <cc:Agent>
             <dc:title>Vincent Hiribarren</dc:title>
@@ -80,7 +115,7 @@
          sodipodi:open="true"
          sodipodi:end="10.166206"
          sodipodi:start="5.5143969"
-         d="m 497.51604,457.55909 c 44.35017,45.84849 43.13555,118.96895 -2.71294,163.31913 -45.84849,44.35018 -118.96896,43.13555 -163.31914,-2.71294 -42.46207,-43.8966 -43.41108,-113.26327 -2.16578,-158.30507"
+         d="m 497.51604,457.55909 a 115.5,115.5 0 0 1 -1.05306,161.68073 115.5,115.5 0 0 1 -161.66904,2.2118 115.5,115.5 0 0 1 -5.47576,-161.59141"
          sodipodi:ry="115.5"
          sodipodi:rx="115.5"
          sodipodi:cy="537.86218"
@@ -207,7 +242,7 @@
          sodipodi:cy="746.36218"
          sodipodi:rx="68"
          sodipodi:ry="68"
-         d="m 224,746.36218 c 0,37.55537 -30.44464,68 -68,68 -37.55536,0 -68,-30.44463 -68,-68 0,-37.55536 30.44464,-68 68,-68 37.55536,0 68,30.44464 68,68"
+         d="m 224,746.36218 a 68,68 0 0 1 -68,68 68,68 0 0 1 -68,-68 68,68 0 0 1 68,-68 68,68 0 0 1 68,68 z"
          transform="translate(-42,-64)"
          inkscape:export-filename="C:\Users\Vynce\Desktop\record.png"
          inkscape:export-xdpi="21.17647"
@@ -219,7 +254,7 @@
          inkscape:export-ydpi="19.842997">
         <path
            transform="translate(0,-20)"
-           d="m 346,676.36218 c 0,19.88225 -16.11775,36 -36,36 -19.88225,0 -36,-16.11775 -36,-36 0,-19.88225 16.11775,-36 36,-36 19.88225,0 36,16.11775 36,36 z"
+           d="m 346,676.36218 a 36,36 0 0 1 -36,36 36,36 0 0 1 -36,-36 36,36 0 0 1 36,-36 36,36 0 0 1 36,36 z"
            sodipodi:ry="36"
            sodipodi:rx="36"
            sodipodi:cy="676.36218"
@@ -241,7 +276,7 @@
          sodipodi:cy="691.36218"
          sodipodi:rx="51"
          sodipodi:ry="51"
-         d="m 556,691.36218 c 0,28.16652 -22.83348,51 -51,51 -28.16652,0 -51,-22.83348 -51,-51 0,0 0,0 0,0"
+         d="m 556,691.36218 a 51,51 0 0 1 -25.5,44.1673 51,51 0 0 1 -51,0 51,51 0 0 1 -25.5,-44.1673"
          sodipodi:start="0"
          sodipodi:end="3.1415927"
          sodipodi:open="true"
@@ -371,6 +406,55 @@
          inkscape:export-filename="C:\Users\Vynce\Desktop\mute.png"
          inkscape:export-xdpi="14.417397"
          inkscape:export-ydpi="14.417397" />
+      <rect
+         style="fill:#00b600;stroke:#000000;stroke-width:7.8308177;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1;filter:url(#filter4327)"
+         id="rect4992-43"
+         width="134.76918"
+         height="96.76918"
+         x="520.61542"
+         y="877.9776"
+         ry="26"
+         inkscape:export-filename="C:\Users\Vynce\Desktop\menu.png"
+         inkscape:export-xdpi="72.345917"
+         inkscape:export-ydpi="72.345917" />
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot4994-6"
+         style="font-style:normal;font-weight:normal;font-size:84.7039566px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:25;stroke-miterlimit:4;stroke-dasharray:none"
+         inkscape:export-filename="C:\Users\Vynce\Desktop\menu.png"
+         inkscape:export-xdpi="72.345917"
+         inkscape:export-ydpi="72.345917"
+         transform="translate(516.7,864.06217)"><flowRegion
+           id="flowRegion4996-7"><rect
+             id="rect4998-4"
+             width="88.939156"
+             height="114.35034"
+             x="55.444611"
+             y="9.9322815" /></flowRegion><flowPara
+           id="flowPara5000-0">M</flowPara></flowRoot>      <path
+         style="fill:none;stroke:#000000;stroke-width:7.01100016;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 538.10751,903.36221 21.78498,0"
+         id="path5004-5"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Vynce\Desktop\menu.png"
+         inkscape:export-xdpi="72.345917"
+         inkscape:export-ydpi="72.345917" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:7.01100016;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 538.10751,945.36222 21.78498,0"
+         id="path5004-9-8"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Vynce\Desktop\menu.png"
+         inkscape:export-xdpi="72.345917"
+         inkscape:export-ydpi="72.345917" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:7.01100016;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 538.10751,924.36221 21.78498,0"
+         id="path5004-2-75"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="C:\Users\Vynce\Desktop\menu.png"
+         inkscape:export-xdpi="72.345917"
+         inkscape:export-ydpi="72.345917" />
     </g>
   </g>
 </svg>
