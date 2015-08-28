@@ -1,7 +1,7 @@
 Freebox Zapper
 ==============
 
-![ScreenShot1](materials/screenshot1.png) ![ScreenShot2](materials/screenshot2.png)
+![ScreenShot1](materials/screenshot1-mini.png) ![ScreenShot2](materials/screenshot2-mini.png)
 
 *English abstract:* this project is related to the French set-top box Freebox. So the following explanations will be in French. It is about a soft remote control for mobile Android-based phones. As it is a project so I can test JQuery mobile and Cordova - and as the API used is quite simple - it is written as a WebApp.
 
